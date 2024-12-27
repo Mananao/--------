@@ -8,7 +8,10 @@
 		display: flex;
 		height: 100%;
 		background-color:darkslategrey;
-		font-family: -apple-system, "Hannotate SC", cursive;
+		font-family: "Hachi Maru Pop", serif;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 20px;
 	}
 	.image {
 		position: fixed;
@@ -55,7 +58,9 @@
 		display: flex;
 		height: 100%;
 		background-color:darkslategrey;
-		font-family: -apple-system, "Hannotate SC", cursive;
+		font-family: "Hachi Maru Pop", serif;
+		font-weight: 400;
+		font-style: normal;
 	}
 	.image {
 		position: fixed;
@@ -65,7 +70,7 @@
 	}
 	.text-area {
 		position: fixed;
-		top: 20%;
+		top: 15%;
 		left: 65%;
 		width: 30%;
 		height: 60%;
@@ -87,8 +92,8 @@
 	.back {
 		width: 100%;
 	}
-	/*.back:hover,*/
-	.back-area:hover{
+	/*.back:active,*/
+	.back-area:active{
 		opacity: .6;
 	}
 }
@@ -102,7 +107,10 @@
 		display: flex;
 		height: 100%;
 		background-color:darkslategrey;
-		font-family: -apple-system, "Hannotate SC", cursive;
+		font-family: "Hachi Maru Pop", serif;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 32px;
 	}
 	.wrap {
 		display: flex;
@@ -120,7 +128,6 @@
 		left: 10%;
 		width: 60%;
 		margin-top: 10px;
-		font-size: 32px;
 		color: blanchedalmond;
 	}
 	.back-frame {
@@ -131,7 +138,6 @@
 		margin: 0;
 		padding: 0;
 		text-align: center;
-		font-size: 32px;
 		color: blanchedalmond;
 	}
 	.back {
@@ -152,7 +158,10 @@
 		display: flex;
 		height: 100%;
 		background-color:darkslategrey;
-		font-family: -apple-system, "Hannotate SC", cursive;
+		font-family: "Hachi Maru Pop", serif;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 24px;
 	}
 	.wrap {
 		display: flex;
@@ -170,7 +179,6 @@
 		left: 10%;
 		width: 60%;
 		margin-top: 10px;
-		font-size: 24px;
 		color: blanchedalmond;
 	}
 	.back-frame {
@@ -181,7 +189,6 @@
 		margin: 0;
 		padding: 0;
 		text-align: center;
-		font-size: 24px;
 		color: blanchedalmond;
 	}
 	.back {
