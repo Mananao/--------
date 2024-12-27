@@ -1,0 +1,195 @@
+@charset "utf-8";
+/* パソコン */
+@media (min-width: 1025px) {
+	html {
+		height: 100%;
+	}
+	body {
+		display: flex;
+		height: 100%;
+		background-color:darkslategrey;
+		font-family: -apple-system, "Hannotate SC", cursive;
+	}
+	.image {
+		position: fixed;
+		top: 20%;
+		left: 10%;
+		width: 50%;
+	}
+	.text-area {
+		position: fixed;
+		top: 20%;
+		left: 65%;
+		width: 30%;
+		height: 60%;
+		color: blanchedalmond;
+	}
+	div {
+		position: fixed;
+	}
+	.back-frame {
+		position: fixed;
+		bottom: 10vh;
+		right: 5vw;
+		width: 20vh;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		color: blanchedalmond;
+	}
+	.back {
+		width: 100%;
+	}
+	/*.back:hover,*/
+	.back-area:hover{
+		opacity: .6;
+	}
+}
+
+/* スマホ 横型 */
+@media screen and (orientation: landscape) and (max-width: 1024px) {
+	html {
+		height: 100%;
+	}
+	body {
+		display: flex;
+		height: 100%;
+		background-color:darkslategrey;
+		font-family: -apple-system, "Hannotate SC", cursive;
+	}
+	.image {
+		position: fixed;
+		top: 20%;
+		left: 10%;
+		width: 50%;
+	}
+	.text-area {
+		position: fixed;
+		top: 20%;
+		left: 65%;
+		width: 30%;
+		height: 60%;
+		color: blanchedalmond;
+	}
+	div {
+		position: fixed;
+	}
+	.back-frame {
+		position: fixed;
+		bottom: 5vh;
+		right: 5vw;
+		width: 15vh;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		color: blanchedalmond;
+	}
+	.back {
+		width: 100%;
+	}
+	/*.back:hover,*/
+	.back-area:hover{
+		opacity: .6;
+	}
+}
+
+/* スマホ 縦型 */
+@media screen and (orientation: portrait) and (max-width: 767px) {
+	html {
+		height: 100%;
+	}
+	body {
+		display: flex;
+		height: 100%;
+		background-color:darkslategrey;
+		font-family: -apple-system, "Hannotate SC", cursive;
+	}
+	.wrap {
+		display: flex;
+	}
+	.image {
+		position: fixed;
+		top: 25%;
+		left: 10%;
+		right: 10%;
+		width: 80%;
+	}
+	.text-area {
+		position: fixed;
+		top: 55%;
+		left: 10%;
+		width: 60%;
+		margin-top: 10px;
+		font-size: 32px;
+		color: blanchedalmond;
+	}
+	.back-frame {
+		position: fixed;
+		bottom: 15vh;
+		right: 5vw;
+		width: 20vw;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		font-size: 32px;
+		color: blanchedalmond;
+	}
+	.back {
+		width: 100%;
+	}
+	/*.back:hover,*/
+	.back-area:hover{
+		opacity: .6;
+	}
+}
+
+/* ipad 縦型 */
+@media screen and (orientation: portrait) and (min-width: 768px) {
+	html {
+		height: 100%;
+	}
+	body {
+		display: flex;
+		height: 100%;
+		background-color:darkslategrey;
+		font-family: -apple-system, "Hannotate SC", cursive;
+	}
+	.wrap {
+		display: flex;
+	}
+	.image {
+		position: fixed;
+		top: 25%;
+		left: 10%;
+		right: 10%;
+		width: 80%;
+	}
+	.text-area {
+		position: fixed;
+		top: 60%;
+		left: 10%;
+		width: 60%;
+		margin-top: 10px;
+		font-size: 24px;
+		color: blanchedalmond;
+	}
+	.back-frame {
+		position: fixed;
+		bottom: 5vh;
+		right: 5vw;
+		width: 15vw;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		font-size: 24px;
+		color: blanchedalmond;
+	}
+	.back {
+		width: 100%;
+	}
+	/*.back:hover,*/
+	.back-area:hover{
+		opacity: .6;
+	}
+}
+
