@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="https://code.jquery.com/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/common.css" type="text/css">
+		<title>自動販売機</title>
+		<!-- TO DO
+			
+		-->
+		<link rel="stylesheet" href="css/ice-cream.css" type="text/css">
+		<script type="text/javascript" src="js/ice-cream.js"></script>
+	</head>
+
+	<body>
+		
+		<!-- ヘッダー -->
+		<div class="header">
+			<p id="message">いらっしゃいませ！（サンプル）</p>
+		</div>
+
+		<!-- メイン -->
+		<div class="main_area">
+			
+			<!-- イベントなし -->
+			<img id="machine" class="machine" src="img/vending_machine/machine.png" alt="自販機">
+			<img id="girl" class="girl" src="img/vending_machine/buying_ice_girl.png" alt="買い物をする女の子">
+			
+
+			<!-- イベントあり -->
+			<!-- おつり -->
+			<div class="change_area">
+				<img id="change_button" src="img/vending_machine/change_buttun.png" alt="おつりレバー">
+			</div>
+
+			<!-- アイスの販売 -->
+			<div class="purchace_area">
+				<!-- 投入金額 -->
+				<input id="inserted_amount" type="text" value="0" readonly></input>
+				<img id="display_img" class="" src="img/vending_machine/display.png" alt="ディスプレイ">
+				<!-- アイスの絵 -->
+				<img id="mint" class="ice" src="img/vending_machine/mint_ice.png" alt="ミントアイス">
+				<img id="berry" class="ice" src="img/vending_machine/berry_ice.png" alt="ベリーアイス">
+				<img id="orange" class="ice" src="img/vending_machine/orange_ice.png" alt="オレンジアイス">
+				<!-- アイスの値段 -->
+				<button id="purchace_mint" class="buy">110</button>
+				<button id="purchace_berry" class="buy">140</button>
+				<button id="purchace_orange" class="buy">170</button>
+			</div>
+
+			<!-- 購入アイス -->
+			<div class="purchaced_ice_area">
+				<button id="eat_button" class="ice-cream_button">たべる</button>
+			</div>
+
+			<!-- コイン -->
+			<div class="coin_area">
+				<img id="five-hundred_yen" class="coin" src="img/vending_machine/500yen.png" alt="500円">
+				<img id="hundred_yen" class="coin" src="img/vending_machine/100yen.png" alt="100円">
+				<img id="ten_yen" class="coin" src="img/vending_machine/10yen.png" alt="10円">
+			</div>
+			
+			<!-- 縦画面用警告 -->
+			<span id="warning">
+				縦画面未対応！
+				画面を横にしてください！
+			</span>
+		</div>
+		
+		<!-- ヘッダー -->
+		<div class="footer">
+			<button id="retry" class="ice-cream_button">はじめから</button>
+			<button id="back" class="ice-cream_button">もどる</button>
+		</div>
+	</body>
+</html>

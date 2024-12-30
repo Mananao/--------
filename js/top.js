@@ -4,9 +4,9 @@ $(function(){
 	})
 
 	// 工事中
-	/*$("#ice").on("click", function(){
+	$("#ice").on("click", function(){
 		window.location.href = 'ice-cream.html';
-	})*/
+	})
 
 	/*$("#taniku").on("click", function(){
 		window.location.href = 'cactus.html';

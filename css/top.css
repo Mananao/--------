@@ -1,18 +1,41 @@
 @charset "utf-8";
+/* 共通 */
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	background-color:darkslategrey;
+	font-family: "Hachi Maru Pop", serif;
+	font-weight: 400;
+	font-style: normal;
+}
+.kouji-chu{
+	color: coral;
+}
+
+/* カーソル */
+@media (hover: hover) {	
+	.buttun:hover {
+		opacity: .6;
+	}
+	.icon:hover{
+		opacity: .6;
+	}
+}
+/* タッチパネル */
+@media (hover: none) {
+	.buttun:active {
+		opacity: .6;
+	}
+	.icon:active{
+		opacity: .6;
+	}
+}
+
+/* ================================================== */
 /* 横型 */
 @media screen and (orientation: landscape) {
-	html {
-		height: 100%;
-	}
-
-	body {
-		height: 100%;
-		background-color:darkslategrey;
-		font-family: "Hachi Maru Pop", serif;
-		font-weight: 400;
-		font-style: normal;
-	}
-
 	.header {
 		text-align: center;
 		width: 100%;
@@ -49,9 +72,6 @@
 	.icon {
 		width: 100%;
 	}
-	.icon:active{
-		opacity: .6;
-	}
 	/* ボタン画像に文字を埋め込む場合 */
 	.buttun {
 		display: inline-block;
@@ -62,29 +82,10 @@
 		padding: 2% 5% 2%;
 		color: blanchedalmond;
 	}
-	.buttun:active {
-		opacity: .6;
-	}
-
-	.kouji-chu{
-		color: coral;
-	}
 }
 
 /* 縦型 */
 @media screen and (orientation: portrait) {
-	html {
-		height: 100%;
-	}
-	
-	body {
-		height: 100%;
-		background-color:darkslategrey;
-		font-family: "Hachi Maru Pop", serif;
-		font-weight: 400;
-		font-style: normal;
-	}
-	
 	.header {
 		text-align: center;
 		width: 100%;
@@ -121,9 +122,6 @@
 	.icon {
 		width: 100%;
 	}
-	.icon:active{
-		opacity: .6;
-	}
 	/* ボタン画像に文字を埋め込む場合 */
 	.buttun {
 		display: inline-block;
@@ -133,13 +131,6 @@
 		max-width: 15vw;/* スマホ用 */
 		padding: 2% 5% 2%;
 		color: blanchedalmond;
-	}
-	.buttun:active {
-		opacity: .6;
-	}
-	
-	.kouji-chu{
-		color: coral;
 	}
 }
 

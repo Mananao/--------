@@ -1,0 +1,278 @@
+@charset "utf-8";
+/* 共通 */
+html {
+	height: 100%;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+body * {
+	color: blanchedalmond;
+	font-family: "Yusei Magic", serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.5dvw;
+}
+.ice-cream_button{
+    padding: 7px 10px;
+    border-top: 10px dotted gold;
+    border-right: 10px dotted gold;
+    border-bottom: 10px dotted orange;
+    border-left: 10px dotted orange;
+    border-radius: 25px;
+    background: #94ffdb;
+    color:rgb(254, 96, 162);
+}
+.header,
+.footer {
+	position: relative;
+	width: 100%;
+	height: 20dvh;
+	text-align: center;
+}
+.main_area {
+	position: relative;
+	width: 100%;
+	height: 60dvh;
+	background-color:#C2CCFF;
+}
+
+/* カーソル */
+@media (hover: hover) {
+	.ice-cream_button:hover {
+		border-top: 10px dotted orange;
+		border-right: 10px dotted orange;
+		border-bottom: 10px dotted yellow;
+		border-left: 10px dotted yellow;
+		background: #ECA2F5;
+	}
+	.buy:hover,
+	.coin:hover,
+	#change_button:hover{
+		opacity: .6;
+		transform: scale(1.05,1.05);
+	}
+}
+/* タッチパネル */
+@media (hover: none) {
+	.ice-cream_button:active {
+		border-top: 10px dotted orange;
+		border-right: 10px dotted orange;
+		border-bottom: 10px dotted yellow;
+		border-left: 10px dotted yellow;
+		background: #ECA2F5;
+	}
+	/* PC版制作後にやる */
+}
+
+/* ================================================== */
+/* 横型 */
+@media screen and (orientation: landscape) {
+	#message {
+		position: absolute;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		margin: 2dvh auto;
+		font-size: 2.5dvw;
+		color: #377fcc;
+
+	}
+	/* main */
+	.machine {
+		position: absolute;
+		height: 45dvh;
+		left: 0;
+		bottom: 3dvh;
+	}
+	.girl {
+		position: absolute;
+		height: 35dvh;
+		right: -2dvw;
+		bottom: 3dvh;
+	}
+
+	.change_area{
+		display: flex;
+		position: absolute;
+		justify-content: center;
+		left: 43dvw;
+		bottom: 4dvh;
+		width: 13dvw;
+		height: 38dvh;
+		border-radius: 45px;
+		background-color: #ffe8f5;
+	}
+	#change_button {
+		position: absolute;
+		height: 13dvh;
+		top: -15dvh;
+	}
+
+	.purchace_area {
+		display: flex;
+		position: absolute;
+		left: 25dvw;
+		bottom: 4dvh;
+		width: 13dvw;
+		height: 40dvh;
+		border-radius: 45px;
+		border: 1dvh solid #b5b8de;
+		background-color: #d5d5fc;
+		justify-content: center;
+	}
+	#display_img {
+		position: absolute;
+		top: -13dvh;
+		text-align: right;
+		width: 12dvw;
+		height: 12dvh;
+		z-index: 0;
+	}
+	#inserted_amount {
+		position: absolute;
+		top: -10dvh;
+		text-align: right;
+		width: 10dvw;
+		height: 5dvh;
+		padding-right: 1dvw;
+		color: #377fcc;
+		background-color: transparent;
+		border: 0;
+		outline: none;
+		font-weight: bold;
+		font-size: 2dvw;
+		z-index: 1;
+	}
+	.ice{
+		position: absolute;
+		height: 11dvh;
+		margin: 2dvh 0;
+		left: 0;
+	}
+	#mint {
+		top: 0;
+	}
+	#berry {
+		top: 0;
+  		bottom: 0;
+  		margin: auto 0;
+	}
+	#orange {
+		bottom: 0;
+	}
+	.buy {
+		position: absolute;
+		right: 2dvw;
+		width: 5dvw;
+		height: 6dvh;
+		color: #377fcc;
+		background-color: #FAE976;
+		border-radius: 45px;
+		font-weight: bold;
+		border: 0.5dvh solid #f5b747;
+	}
+	#purchace_mint {
+		top: 5dvh;
+	}
+	#purchace_berry {
+		top: 0;
+  		bottom: 0;
+  		margin: auto 0;
+	}
+	#purchace_orange {
+		bottom: 5dvh;
+	}
+
+	.purchaced_ice_area {
+		display: flex;
+		position: absolute;
+		justify-content: left;
+		left: 59dvw;
+		bottom: 4dvh;
+		width: 13dvw;
+		height: 40dvh;
+		border-radius: 45px;
+		border: 1dvh solid #b5b8de;
+		justify-content: center;
+	}
+	#eat_button {
+		position: absolute;
+		top: -12dvh;
+		height: auto;
+		color: #377fcc;
+		font-weight: bolder;
+	}
+
+	.coin_area {
+		display: flex;
+		position: absolute;
+		justify-content: left;
+		left: 75dvw;
+		bottom: 4dvh;
+		width: 8dvw;
+		height: 40dvh;
+		border-radius: 45px;
+		border: 1dvh solid #b5b8de;
+		justify-content: center;
+	}
+	.coin {
+		position: absolute;
+		margin: 2dvh 0;
+	}
+	#ten_yen {
+		height: 11dvh;
+		top: 0;
+	}
+	#hundred_yen {
+		height: 11dvh;
+		top: 0;
+		bottom: 0;
+		margin: auto 0;
+	}
+	#five-hundred_yen {
+		height: 12dvh;
+		bottom: -1dvh;
+	}
+
+	/* footer */
+	#back {
+		position: absolute;
+		top: 3dvh;
+		right: 2dvw;
+		margin-right: 2dvw;
+	}
+	#retry {
+		position: absolute;
+		top: 3dvh;
+		right: 13dvw;
+		margin-right: 2dvw;
+	}
+	#warning {
+		display: none;
+	}
+}
+
+/* 縦型 */
+@media screen and (orientation: portrait) {
+	/* PC版制作後にやる */
+	body * {
+		color: blanchedalmond;
+		font-family: "Yusei Magic", serif;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 2dvh;
+	}
+	.main_area * {
+		display: none;
+	}
+	#warning {
+		display: initial;
+		font-size: 5dvw;
+		color: blue;
+	}
+}
+
+

@@ -1,18 +1,55 @@
 @charset "utf-8";
+/* 共通 */
+html {
+	height: 100%;
+}
+body {
+	display: flex;
+	height: 100%;
+	background-color:darkslategrey;
+}
+body * {
+	color: blanchedalmond;
+	font-family: "Hachi Maru Pop", serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 20px;
+}
+.about-me_back{
+    padding: 7px 10px;
+    border-top: 10px dotted yellow;
+    border-right: 10px dotted yellow;
+    border-bottom: 10px dotted orange;
+    border-left: 10px dotted orange;
+    border-radius: 25px;
+    background: rgba(245, 78, 69, 0.928);
+    color: blanchedalmond;
+}
+
+/* カーソル */
+@media (hover: hover) {	
+	.about-me_back:hover {
+		border-top: 10px dotted orange;
+		border-right: 10px dotted orange;
+		border-bottom: 10px dotted yellow;
+		border-left: 10px dotted yellow;
+		background: mediumseagreen;
+	}
+}
+/* タッチパネル */
+@media (hover: none) {
+	.about-me_back:active {
+		border-top: 10px dotted orange;
+		border-right: 10px dotted orange;
+		border-bottom: 10px dotted yellow;
+		border-left: 10px dotted yellow;
+		background: mediumseagreen;
+	}
+}
+
+/* ================================================== */
 /* パソコン */
 @media (min-width: 1025px) {
-	html {
-		height: 100%;
-	}
-	body {
-		display: flex;
-		height: 100%;
-		background-color:darkslategrey;
-		font-family: "Hachi Maru Pop", serif;
-		font-weight: 400;
-		font-style: normal;
-		font-size: 20px;
-	}
 	.image {
 		position: fixed;
 		top: 20%;
@@ -25,7 +62,6 @@
 		left: 65%;
 		width: 30%;
 		height: 60%;
-		color: blanchedalmond;
 	}
 	div {
 		position: fixed;
@@ -38,7 +74,11 @@
 		margin: 0;
 		padding: 0;
 		text-align: center;
-		color: blanchedalmond;
+	}
+	.back-posi {
+		position: fixed;
+		bottom: 10vh;
+		right: 5vw;
 	}
 	.back {
 		width: 100%;
@@ -51,17 +91,6 @@
 
 /* スマホ 横型 */
 @media screen and (orientation: landscape) and (max-width: 1024px) {
-	html {
-		height: 100%;
-	}
-	body {
-		display: flex;
-		height: 100%;
-		background-color:darkslategrey;
-		font-family: "Hachi Maru Pop", serif;
-		font-weight: 400;
-		font-style: normal;
-	}
 	.image {
 		position: fixed;
 		top: 20%;
@@ -74,7 +103,6 @@
 		left: 65%;
 		width: 30%;
 		height: 60%;
-		color: blanchedalmond;
 	}
 	div {
 		position: fixed;
@@ -87,7 +115,11 @@
 		margin: 0;
 		padding: 0;
 		text-align: center;
-		color: blanchedalmond;
+	}
+	.back-posi {
+		position: fixed;
+		bottom: 5vh;
+		right: 5vw;
 	}
 	.back {
 		width: 100%;
@@ -100,16 +132,7 @@
 
 /* スマホ 縦型 */
 @media screen and (orientation: portrait) and (max-width: 767px) {
-	html {
-		height: 100%;
-	}
-	body {
-		display: flex;
-		height: 100%;
-		background-color:darkslategrey;
-		font-family: "Hachi Maru Pop", serif;
-		font-weight: 400;
-		font-style: normal;
+	body * {
 		font-size: 32px;
 	}
 	.wrap {
@@ -128,7 +151,6 @@
 		left: 10%;
 		width: 60%;
 		margin-top: 10px;
-		color: blanchedalmond;
 	}
 	.back-frame {
 		position: fixed;
@@ -138,7 +160,11 @@
 		margin: 0;
 		padding: 0;
 		text-align: center;
-		color: blanchedalmond;
+	}
+	.back-posi {
+		position: fixed;
+		bottom: 15vh;
+		right: 5vw;
 	}
 	.back {
 		width: 100%;
@@ -151,16 +177,7 @@
 
 /* ipad 縦型 */
 @media screen and (orientation: portrait) and (min-width: 768px) {
-	html {
-		height: 100%;
-	}
-	body {
-		display: flex;
-		height: 100%;
-		background-color:darkslategrey;
-		font-family: "Hachi Maru Pop", serif;
-		font-weight: 400;
-		font-style: normal;
+	body * {
 		font-size: 24px;
 	}
 	.wrap {
@@ -179,7 +196,6 @@
 		left: 10%;
 		width: 60%;
 		margin-top: 10px;
-		color: blanchedalmond;
 	}
 	.back-frame {
 		position: fixed;
@@ -189,7 +205,11 @@
 		margin: 0;
 		padding: 0;
 		text-align: center;
-		color: blanchedalmond;
+	}
+	.back-posi {
+		position: fixed;
+		bottom: 5vh;
+		right: 5vw;
 	}
 	.back {
 		width: 100%;
