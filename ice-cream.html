@@ -16,7 +16,8 @@
 		
 		<!-- ヘッダー -->
 		<div class="header">
-			<p id="message">いらっしゃいませ！（サンプル）</p>
+			<p id="message"></p>
+			<input id="message_num" type="hidden"></p>
 		</div>
 
 		<!-- メイン -->
@@ -34,30 +35,31 @@
 			</div>
 
 			<!-- アイスの販売 -->
-			<div class="purchace_area">
+			<div class="purchase_area">
 				<!-- 投入金額 -->
 				<input id="inserted_amount" type="text" value="0" readonly></input>
+				<input id="min_price" type="hidden"></p>
 				<img id="display_img" class="" src="img/vending_machine/display.png" alt="ディスプレイ">
 				<!-- アイスの絵 -->
-				<img id="mint" class="ice" src="img/vending_machine/mint_ice.png" alt="ミントアイス">
-				<img id="berry" class="ice" src="img/vending_machine/berry_ice.png" alt="ベリーアイス">
-				<img id="orange" class="ice" src="img/vending_machine/orange_ice.png" alt="オレンジアイス">
+				<img id="mint_img" class="ice" src="img/vending_machine/mint_ice.png" alt="ミントアイス">
+				<img id="berry_img" class="ice" src="img/vending_machine/berry_ice.png" alt="ベリーアイス">
+				<img id="orange_img" class="ice" src="img/vending_machine/orange_ice.png" alt="オレンジアイス">
 				<!-- アイスの値段 -->
-				<button id="purchace_mint" class="buy">110</button>
-				<button id="purchace_berry" class="buy">140</button>
-				<button id="purchace_orange" class="buy">170</button>
+				<button id="mint" class="buy"></button>
+				<button id="berry" class="buy"></button>
+				<button id="orange" class="buy"></button>
 			</div>
 
 			<!-- 購入アイス -->
-			<div class="purchaced_ice_area">
+			<div class="purchased_ice_area">
 				<button id="eat_button" class="ice-cream_button">たべる</button>
 			</div>
 
 			<!-- コイン -->
 			<div class="coin_area">
-				<img id="five-hundred_yen" class="coin" src="img/vending_machine/500yen.png" alt="500円">
-				<img id="hundred_yen" class="coin" src="img/vending_machine/100yen.png" alt="100円">
-				<img id="ten_yen" class="coin" src="img/vending_machine/10yen.png" alt="10円">
+				<input type="image" id="input_500yen" class="coin coin_500yen" value="500" src="img/vending_machine/500yen.png" alt="500円">
+				<input type="image" id="input_100yen" class="coin coin_100yen" value="100" src="img/vending_machine/100yen.png" alt="100円">
+				<input type="image" id="input_10yen" class="coin coin_10yen" value="10" src="img/vending_machine/10yen.png" alt="10円">
 			</div>
 			
 			<!-- 縦画面用警告 -->
@@ -71,6 +73,7 @@
 		<div class="footer">
 			<button id="retry" class="ice-cream_button">はじめから</button>
 			<button id="back" class="ice-cream_button">もどる</button>
+			<p id="eat_count"></p>
 		</div>
 	</body>
 </html>

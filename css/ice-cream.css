@@ -78,7 +78,6 @@ body * {
 		margin: 2dvh auto;
 		font-size: 2.5dvw;
 		color: #377fcc;
-
 	}
 	/* main */
 	.machine {
@@ -94,24 +93,7 @@ body * {
 		bottom: 3dvh;
 	}
 
-	.change_area{
-		display: flex;
-		position: absolute;
-		justify-content: center;
-		left: 43dvw;
-		bottom: 4dvh;
-		width: 13dvw;
-		height: 38dvh;
-		border-radius: 45px;
-		background-color: #ffe8f5;
-	}
-	#change_button {
-		position: absolute;
-		height: 13dvh;
-		top: -15dvh;
-	}
-
-	.purchace_area {
+	.purchase_area {
 		display: flex;
 		position: absolute;
 		left: 25dvw;
@@ -149,11 +131,44 @@ body * {
 	.ice{
 		position: absolute;
 		height: 11dvh;
-		margin: 2dvh 0;
 		left: 0;
 	}
-	#mint {
+	#mint_img {
+		top: 2dvh;
+	}
+	#berry_img {
 		top: 0;
+  		bottom: 0;
+  		margin: auto 0;
+	}
+	#orange_img {
+		bottom: 2dvh;
+	}
+	.buy {
+		position: absolute;
+		right: 2dvw;
+		width: 5dvw;
+		height: 6dvh;
+		border-radius: 45px;
+		font-weight: bold;
+	}
+	.can-buy {
+		background-color: #94ffdb;
+		color: #377fcc;
+		border: 0.5dvh solid gold;
+	}
+	.cannot-buy {
+		background-color: #FAE976;
+		color: #377fcc;
+		border: 0.5dvh solid #f5b747;
+	}
+	.no-stock {
+		background-color: darkcyan;
+		color: darkred;
+		border: 0.5dvh solid #43676b;
+	}
+	#mint {
+		top: 5dvh;
 	}
 	#berry {
 		top: 0;
@@ -161,32 +176,10 @@ body * {
   		margin: auto 0;
 	}
 	#orange {
-		bottom: 0;
-	}
-	.buy {
-		position: absolute;
-		right: 2dvw;
-		width: 5dvw;
-		height: 6dvh;
-		color: #377fcc;
-		background-color: #FAE976;
-		border-radius: 45px;
-		font-weight: bold;
-		border: 0.5dvh solid #f5b747;
-	}
-	#purchace_mint {
-		top: 5dvh;
-	}
-	#purchace_berry {
-		top: 0;
-  		bottom: 0;
-  		margin: auto 0;
-	}
-	#purchace_orange {
 		bottom: 5dvh;
 	}
 
-	.purchaced_ice_area {
+	.purchased_ice_area {
 		display: flex;
 		position: absolute;
 		justify-content: left;
@@ -195,8 +188,12 @@ body * {
 		width: 13dvw;
 		height: 40dvh;
 		border-radius: 45px;
-		border: 1dvh solid #b5b8de;
+		/*border: 1dvh solid #b5b8de;*/
 		justify-content: center;
+	}
+	.purchased_ice{
+		position: absolute;
+		height: 9dvh;
 	}
 	#eat_button {
 		position: absolute;
@@ -204,6 +201,36 @@ body * {
 		height: auto;
 		color: #377fcc;
 		font-weight: bolder;
+	}
+	
+	.coin_10yen {
+		position: absolute;
+		height: 11dvh;
+	}
+	.coin_100yen {
+		position: absolute;
+		height: 11dvh;
+	}
+	.coin_500yen {
+		position: absolute;
+		height: 12dvh;
+	}
+
+	.change_area{
+		display: flex;
+		position: absolute;
+		justify-content: center;
+		left: 43dvw;
+		bottom: 4dvh;
+		width: 13dvw;
+		height: 38dvh;
+		border-radius: 45px;
+		background-color: #ffe8f5;
+	}
+	#change_button {
+		position: absolute;
+		height: 13dvh;
+		top: -15dvh;
 	}
 
 	.coin_area {
@@ -215,29 +242,26 @@ body * {
 		width: 8dvw;
 		height: 40dvh;
 		border-radius: 45px;
-		border: 1dvh solid #b5b8de;
+		/*border: 1dvh solid #b5b8de;*/
 		justify-content: center;
 	}
-	.coin {
-		position: absolute;
-		margin: 2dvh 0;
+	#input_10yen {
+		top: 2dvh;
 	}
-	#ten_yen {
-		height: 11dvh;
-		top: 0;
-	}
-	#hundred_yen {
-		height: 11dvh;
+	#input_100yen {
 		top: 0;
 		bottom: 0;
 		margin: auto 0;
 	}
-	#five-hundred_yen {
-		height: 12dvh;
-		bottom: -1dvh;
+	#input_500yen {
+		bottom: 1dvh;
 	}
 
 	/* footer */
+	#eat_count {
+		color: #A6BFED;
+		font-size: 2dvw;
+	}
 	#back {
 		position: absolute;
 		top: 3dvh;
