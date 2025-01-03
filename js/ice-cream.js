@@ -13,8 +13,8 @@ $(function(){
 		// 待機
 		this.initialSpeak = function(){
 			index.val(0);
-			const amount = $("#inserted_amount").val();
-			const min = $("#min_price").val();
+			const amount = Number($("#inserted_amount").val());
+			const min = Number($("#min_price").val());
 			if ( amount >= min ){
 				$('#message').html("商品を購入してください('▽'*)");
 				$('#message').css("color", "orange");
@@ -49,13 +49,13 @@ $(function(){
 		// 表示可能アイスの上限に到達
 		this.maxIceError = function(){
 			index.val(4);
-			$('#message').html("はやく食べないと溶けちゃう～～(;´･ω･)");
+			$('#message').html("はやくたべないとアイスがとけちゃう～(;´･ω･)");
 			$('#message').css("color", "orange");
 		}
 		// アイスが溶ける
 		this.meltIceSpeak = function(){
 			index.val(5);
-			$('#message').html("あ〜溶けちゃった～～(´;ω;｀)");
+			$('#message').html("あ〜とけちゃった～(´;ω;｀)");
 			$('#message').css("color", "cornflowerblue");
 		}
 		// 利用終了
@@ -83,6 +83,12 @@ $(function(){
 			index.val(9);
 			$('#message').html("あ〜おいしかった♪(*´▽｀*)");
 			$('#message').css("color", "orange");
+		}
+		// 食べるアイスがない
+		this.eatError = function(){
+			index.val(10);
+			$('#message').html("たべるアイスがありません(;´･ω･)");
+			$('#message').css("color", "cornflowerblue");
 		}
 
 
@@ -131,6 +137,7 @@ $(function(){
 		this.setInsertedAmount = function(amount){
 			insertedAmount = amount;
 			this.showAmount();
+			this.initialSpeak();
 			// 購入ボタン更新
 			this.updatePurchaseButton();
 		}
@@ -210,6 +217,12 @@ $(function(){
 					$("#" + icekey).removeClass('no-stock cannot-buy');
 				}
 			}
+
+			// 在庫ありのうち最小金額を計算
+			const minValue = $('.can-buy, .cannot-buy').map(function() {
+				return Number($(this).text());
+			}).get().reduce((a, b) => Math.min(a, b));
+			$("#min_price").val(minValue);
 		}
 		this.stocktaking = function(icename){
 			stockTable[icename].stock--;
@@ -429,19 +442,27 @@ $(function(){
 			$("#eat_count").text('たべた数 ミント: ' + mint + ', ベリー: ' + berry + ', オレンジ: ' + orange + '');
 		}
 		// たべる
-		this.increaseEatIce = function(){
-			// 食べた数をカウント
-			this.countEatIce();
-			// 食べた数を表示
-			this.showEatIce();
-			console.log("mint eat : " + iceTable['mint'].eat);
-			console.log("mint yet : " + iceTable['mint'].yet);
-			// アイスを消す
-			this.rmIce();
-			this.eatSpeak();
-			setTimeout(() => {
-				this.initialSpeakWithCheck(9);
-			}, 3000);
+		this.eatIce = function(){
+			if ( this.getIceCone() != 0 ){
+				// 食べた数をカウント
+				this.countEatIce();
+				// 食べた数を表示
+				this.showEatIce();
+				console.log("mint eat : " + iceTable['mint'].eat);
+				console.log("mint yet : " + iceTable['mint'].yet);
+				// アイスを消す
+				this.rmIce();
+				this.eatSpeak();
+				setTimeout(() => {
+					this.initialSpeakWithCheck(9);
+				}, 3000);
+			} else {
+				// たべるアイスがない
+				this.eatError();
+				setTimeout(() => {
+					this.initialSpeakWithCheck(10);
+				}, 3000);
+			}
 		}
 		// アイスを消す
 		this.rmIceStock = function(){
@@ -511,7 +532,7 @@ $(function(){
 
 	/* たべる */
 	$("#eat_button").on("click", function(){
-		person.increaseEatIce();
+		person.eatIce();
 	});
 
 	/* おつりレバー */
